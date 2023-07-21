@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>编辑和存储表格信息</title>
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="logo">
+        <a href="https://www.cqu.edu.cn" title="重庆大学">重庆大学</a>
+    </div>
+  <div class="slider">
+    <img src="./img/001.png" alt="Slider Image 1" class="active">
+    <img src="./img/002.png" alt="Slider Image 2">
+    <img src="./img/003.png" alt="Slider Image 3">
+  </div>
+
+  <table id="myTable">
+    <thead>
+      <tr>
+        <th>姓名</th>
+        <th>年龄</th>
+        <th>邮箱</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td contenteditable="true">John Doe</td>
+        <td contenteditable="true">25</td>
+        <td contenteditable="true">johndoe@example.com</td>
+      </tr>
+      <tr>
+        <td contenteditable="true">Jane Smith</td>
+        <td contenteditable="true">30</td>
+        <td contenteditable="true">janesmith@example.com</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <button id="saveBtn">保存</button>
+
+  <script>
+    $(document).ready(function() {
+        $('.slider').slick({
+        dots: true,
+        infinite: true,
+        speed: 500,
+        fade: true,
+        cssEase: 'linear'
+      });
+
+      // 保存表格信息到本地存储
+      $('#saveBtn').click(function() {
+        var tableData = [];
+        $('#myTable tbody tr').each(function(row, tr) {
+          tableData[row] = {
+            'name': $(tr).find('td:eq(0)').text(),
+            'age': $(tr).find('td:eq(1)').text(),
+            'email': $(tr).find('td:eq(2)').text()
+          }
+        });
+
+        localStorage.setItem('tableData', JSON.stringify(tableData));
+        alert('表格信息已保存！');
+      });
+
+      // 恢复本地存储的表格信息
+      var storedData = JSON.parse(localStorage.getItem('tableData'));
+      if (storedData !== null) {
+        $.each(storedData, function(row, data) {
+          var newRow = '<tr>' +
+            '<td contenteditable="true">' + data.name + '</td>' +
+            '<td contenteditable="true">' + data.age + '</td>' +
+            '<td contenteditable="true">' + data.email + '</td>' +
+            '</tr>';
+          $('#myTable tbody').append(newRow);
+        });
+      }
+    });
+  </script>
+</body>
+</html>
