@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>计算器</title>
+	<link rel="stylesheet" href="calculator.css">
+	<script src="calculator.js"></script>
+</head>
+
+<body>
+	<div class="content">
+		<div class="left">
+			<h1>计算器</h1>
+			<p>·可保存计算结果</p>
+			<p>·支持取反、取余操作</p>
+			<p>·支持键盘输入</p>
+			<p style="font-size: 16px;">——陈远 202224131099</p>
+		</div>
+		<table class="cal" align="center" border="0" cellpadding="0" cellspacing="0" onclick="getElement()">
+			<tr>
+				<td id="top" colspan="4">0</td>
+			</tr>
+			<tr>
+				<td id="result" colspan="4"></td>
+			</tr>
+			<!-- 接下来是计算器的按钮部分 -->
+			<tr class="button">
+				<td class="btn gray">AC</td>
+				<td class="btn gray">+/-</td>
+				<td class="btn gray">%</td>
+				<td class="btn blue">/</td>
+			</tr>
+			<tr class="button">
+				<td class="btn">7</td>
+				<td class="btn">8</td>
+				<td class="btn">9</td>
+				<td class="btn blue">*</td>
+			</tr>
+			<tr class="button">
+				<td class="btn">4</td>
+				<td class="btn">5</td>
+				<td class="btn">6</td>
+				<td class="btn blue">-</td>
+			</tr>
+			<tr class="button">
+				<td class="btn">1</td>
+				<td class="btn">2</td>
+				<td class="btn">3</td>
+				<td class="btn blue">+</td>
+			</tr>
+			<tr class="button">
+				<td colspan="2" class="btn equal">0<td>
+				<td class="btn">.</td>
+				<td class="btn blue" onclick="calResult()">=</td>
+			</tr>
+		</table>
+	</div>
+</body>
+
+</html>

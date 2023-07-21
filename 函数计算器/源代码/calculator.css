@@ -1,0 +1,115 @@
+* {
+	margin: 0;
+	padding: 0;
+	font-family: Helvetica;
+}
+
+body {
+	background: url(backgroundimage.jpg) no-repeat center center;
+	background-size: cover;
+	background-attachment: fixed;
+	/*background: linear-gradient(to left, #a844ff, #719bff);*/
+	/* height: 100%；; */
+}
+
+.content {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	/* background: linear-gradient(to right bottom, #a844ff, #719bff); */
+}
+.left {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	text-align: left;
+	color: white;
+	/* margin-left: 5%; */
+}
+.left h1 {
+	font-size: 50px;
+	letter-spacing: 1em;
+}
+.left p {
+	font-size: 24px;
+	margin: 2% 0;
+}
+
+tr {
+	width: 400px;
+	height: 96px;
+}
+
+.cal {
+	width: 400px;
+	/* height: 720px; */
+	/* margin: 95px auto; */
+	background-color: #000000;
+	border-radius: 20px;
+	display: block;
+	box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.29);
+	margin-top: 5%;
+}
+
+#top {
+	width: 100%;
+	height: 100px;
+	border-radius: 20px 20px 0 0;
+	color: white;
+	font-size: 60px;
+	text-align: right;
+	padding-right: 20px;
+	word-wrap: break-word;
+}
+
+/*计算结果*/
+#result {
+	width: 100%;
+	height: 140px;
+	color: white;
+	font-size: 70px;
+	text-align: right;
+	padding-right: 20px;
+	word-wrap: break-word;
+}
+
+.button {
+	display: block;
+}
+/*绘制按钮*/
+.btn {
+	width: 70px;
+	height: 70px;
+	display: block;
+	background-color: #333333;
+	border-radius: 100px;
+	float: left;
+	margin-left: 24px;
+	margin-bottom: 26px;
+	text-align: center;
+	line-height: 70px;
+	color: white;
+	font-size: 30px;
+	font-weight: 100;
+	cursor: pointer;
+	box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.29);
+}
+
+/* 等号 */
+.equal {
+	width: 164px;
+	border-radius: 70px;
+}
+
+/* 有颜色的按钮 */
+.blue {
+	background: #efa43e;
+	color: #fdfdfd;
+	box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.29);
+}
+
+.gray {
+	background:#a5a5a5;
+	color: #0c0c0c;
+	box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.29);
+}
