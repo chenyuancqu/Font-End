@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>下拉三级菜单</title>
+    <script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="http://libs.baidu.com/bootstrap/3.0.3/css/bootstrap.min.css"/>
+    <link href="D:\CODE\webtest\webhomework4\StyleSheet1.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="topDIV">
+        <div class="navbar navbar-default container-fluid" role="navigation">
+            <ul class="nav2 navbar-nav">
+                <!--导航菜单-->
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">重庆市<b class="caret"></b></a>
+                    <!--一级下拉菜单-->
+                    <ul class="dropdown-menu">
+                        <li class="dropdown-submenu">
+                            <a href="#" data-toggle="dropdown">沙坪坝区</a>
+                            <!--二级下拉菜单-->
+                            <ul class="dropdown-menu">
+                                <li class="dropdown-submenu">
+                                    <a href="#" data-toggle="dropdown">重庆大学</a>
+                                    <!--三级下拉菜单-->
+                                    <ul class="dropdown-menu">
+                                        <li><a href="#">兰园</a></li>
+                                        <li class="divider"></li>
+                                        <li><a href="#">竹园</a></li>
+                                        <li class="divider"></li>
+                                        <li><a href="#">梅园</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="divider"></li>
+                        <li><a href="#">渝北区</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">渝中区</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="navbar-header">
+                <a class="navbar-brand menuspan" href="#"></a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

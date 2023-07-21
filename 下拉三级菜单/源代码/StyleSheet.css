@@ -1,0 +1,97 @@
+﻿.topDIV {
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #333;
+    position: center;
+    top: 15px;
+    right: 20px;
+    box-sizing: border-box;
+}
+
+@media print {
+    .topDIV :before, :after {
+        color: #000 !important;
+        text-shadow: none !important;
+        background: transparent !important;
+        -webkit-box-shadow: none !important;
+        box-shadow: none !important
+    }
+
+    .topDIV .table-bordered th, .table-bordered td {
+        border: 1px solid #ddd !important
+    }
+}
+
+
+
+.topDIV a {
+    color: #428bca;
+    text-decoration: none
+}
+
+    .topDIV a:hover, a:focus {
+        color: #2a6496;
+        text-decoration: underline
+    }
+
+    .topDIV a:focus {
+        outline: thin dotted;
+        outline: 5px auto -webkit-focus-ring-color;
+        outline-offset: -2px
+    }
+
+.topDIV .container-fluid {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto
+}
+
+.topDIV .row {
+    margin-right: -15px;
+    margin-left: -15px
+}
+
+
+
+
+.topDIV .caret {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    margin-left: 2px;
+    vertical-align: middle;
+    border-top: 4px solid;
+    border-right: 4px solid transparent;
+    border-left: 4px solid transparent
+}
+
+.topDIV .dropdown {
+    position: relative
+}
+
+.topDIV .dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1000;
+    display: none;
+    float: left;
+    min-width: 160px;
+    padding: 5px 0;
+    margin: 2px 0 0;
+    font-size: 14px;
+    text-align: left;
+    list-style: none;
+    background-color: #fff;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    border: 1px solid #ccc;
+    border: 1px solid rgba(0,0,0,.15);
+    border-radius: 4px;
+    -webkit-box-shadow: 0 6px 12px rgba(0,0,0,.175);
+    box-shadow: 0 6px 12px rgba(0,0,0,.175)
+}
+
+    .topDIV .dropdown-menu.pull-right {
